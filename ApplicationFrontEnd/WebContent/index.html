@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html    data-ng-app="hash" lang="en-US" >
+<head>
+<meta charset="ISO-8859-1">
+<title>NIIT COLLABARATION</title>
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script> 
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-cookies.js"></script> 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">NIIT NET CHAT</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#home"   ng-show="home">Home</a></li>
+				<li class="active"><a href="#register" ng-show="register">SIGN UP</a></li>
+				<li class="active"><a href="#login" ng-show="login">SIGN IN</a></li>
+                <li class="active"><a href="#logout" ng-show="logout">SIGN OUT</a></li>
+							
+			</ul>
+		</div>
+	</nav>
+
+<div class="hashMainContainer">
+    <div class="hashMainWrapper">
+      <div ng-view></div>
+    </div>
+  </div>
+
+  <!--   <script src="collab/anugularapp/js/angular.js"></script>
+    <script src="collab/anugularapp/js/angular-route.js"></script>  -->
+    
+   <!--  <script src="collab/anugularapp/js/angular-cookies.js"></script> -->
+
+
+    <script src="anugularapp/js/app.js"></script>
+    <script src="anugularapp/js/angularSPA.js"></script>
+	<script src="register/RegisterController.js"></script>
+	<script src="loginlogout/LoginController.js"></script>
+	 <script src="loginlogout/LogoutController.js"></script> 
+	 	<script src="home/UserHomeController.js"></script>
+
+
+<div id="copyright">
+		<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p class="pull-left">&copy; 2016. NIIT NET CHAT Ltd. All Rights
+					Reserved.</p>		
+
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

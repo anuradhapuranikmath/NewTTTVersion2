@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+ <style>
+  input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+     display: inline-block; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+     display: inline-block; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=number], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+     display: inline-block; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button[type=submit] {
+     background-color: #00cc00;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type=submit]: {
+    background-color: #00cc00;
+}
+/* input[type=file] {
+     /* background-color: #f2f2f2; */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+} */
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+     background: url(http://www.alexanderdesignsgh.com/img/slide1-bg.jpg) no-repeat center fixed; 
+   background-size:cover;
+} 
+ 
+</style>
+</head>
+<body ng-controller="RegisterController">
+	<form name="myForm" novalidate>
+	<h2>{{message}}</h2>
+		 Username:<input type="text" name="userName" ng-model="userName" required>
+		<span ng-show="myForm.name.$dirty &&myForm.name.$error.required">Size can be between 3 and 8</span><br>
+		 Password:<input type="password" name="password" ng-model="password" required ng-minlength="5" ng-maxlength="12"> 
+		 <span ng-show="myForm.password.$dirty &&myForm.password.$error.required">Password is required.</span>
+		 <span ng-show="myForm.password.$dirty &&myForm.password.$error.minlength">password should have 8 characters, at least 1 letter, 1 number and 1 special character</span>
+		  <span ng-show="myForm.password.$dirty &&myForm.password.$error.maxlength">too long.</span><br>
+		 Email:<input type="text" name="userEmail" ng-model="userEmail" required>
+		 <span ng-show="myForm.mobile.$dirty &&myForm.mobile.$error.required">email should be in the abc@xyz.com</span><br><br>
+      <button type="submit" ng-disabled="myForm.$invalid" ng-click="register()">Register</button>
+	</form>
+</body>
+</html>
