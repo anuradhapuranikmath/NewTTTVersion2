@@ -1,0 +1,5 @@
+com\niit\SocialMediaBackEnd\domain\User.class
+com\niit\SocialMediaBackEnd\ApplicationConfiguration\ApplicationConfig.class
+com\niit\SocialMediaBackEnd\Controller\UserController.class
+com\niit\SocialMediaBackEnd\DaoImpl\UserDaoImpl.class
+com\niit\SocialMediaBackEnd\Dao\UserDao.class
