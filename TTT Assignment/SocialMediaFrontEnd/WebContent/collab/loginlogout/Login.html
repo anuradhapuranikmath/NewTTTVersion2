@@ -1,0 +1,60 @@
+
+<head>
+ <style>
+  input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+     display: inline-block; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+ input[type=password], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+     display: inline-block; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button[type=submit] {
+     background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type=submit]: {
+    background-color: #45a049;
+}
+form {
+background: url(http://www.alexanderdesignsgh.com/img/slide1-bg.jpg) no-repeat center fixed; 
+   background-size:cover;
+    border-radius: 5px;
+   
+    padding: 20px;
+     
+} 
+ 
+</style>
+</head>
+
+ <body  ng-controller="LoginController">
+  {{message}}
+ <form name="myForm" novalidate>
+
+		Username:<br><input type="text"  ng-model="name" required><br>
+		<span ng-show="myForm.name.$dirty &&myForm.name.$error.required">User name cannot be empty</span><br>
+		Password:<br><input type="password"  ng-model="password" required><br>
+		<span ng-show="myForm.password.$dirty &&myForm.password.$error.required">password cannot be empty</span><br>
+		 <button type="submit"  ng-disabled="myForm.$invalid"  ng-click="login()">login</button>
+	</form> 
+	</body>
+</div>
